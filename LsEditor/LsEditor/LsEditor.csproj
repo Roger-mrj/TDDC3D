@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC8E805A-F7F6-4CCF-A1EB-99BA67310B71}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LsEditor</RootNamespace>
+    <AssemblyName>LsEditor</AssemblyName>
+    <ApplicationIcon>Draw.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\LsEditor.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\..\release2\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\LsEditor.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.3DAnalyst, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Connection.Local, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GlobeCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Output, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComboBoxItem.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalObj.cs" />
+    <Compile Include="Helper\ColorHelper.cs" />
+    <Compile Include="Helper\ControlStyleHelper.cs" />
+    <Compile Include="Helper\DataOperateHelper.cs" />
+    <Compile Include="Helper\FileHelper.cs" />
+    <Compile Include="Helper\OtherHelper.cs" />
+    <Compile Include="Helper\SymbolCode.cs" />
+    <Compile Include="Helper\SymbolHelper.cs" />
+    <Compile Include="Helper\TextHelper.cs" />
+    <Compile Include="LandStarStyleEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LandStarStyleEditor.resx">
+      <DependentUpon>LandStarStyleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\LineStyle\CartographicLineStyleEditor.resx">
+      <DependentUpon>CartographicLineStyleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\LineStyle\HashLineStyleEditor.resx">
+      <DependentUpon>HashLineStyleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\LineStyle\LineStyleEditor.resx">
+      <DependentUpon>LineStyleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\LineStyle\MarkerLineStyleEditor.resx">
+      <DependentUpon>MarkerLineStyleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\LineStyle\PictureLineStyleEditor.resx">
+      <DependentUpon>PictureLineStyleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\LineStyle\SimpleLineStyleEditor.resx">
+      <DependentUpon>SimpleLineStyleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\PointStyle\ArrowMarkerStyleEditor.resx">
+      <DependentUpon>ArrowMarkerStyleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\PointStyle\CharacterMarkerStyleEditor.resx">
+      <DependentUpon>CharacterMarkerStyleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\PointStyle\PictureMarkerStyleEditor.resx">
+      <DependentUpon>PictureMarkerStyleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\PointStyle\SimpleMarkerStyleEditor.resx">
+      <DependentUpon>SimpleMarkerStyleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\PolygonStyle\DotDensityFillStyleEditor.resx">
+      <DependentUpon>DotDensityFillStyleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\PolygonStyle\GradientFillStyleEditor.resx">
+      <DependentUpon>GradientFillStyleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\PolygonStyle\LineFillStyleEditor.resx">
+      <DependentUpon>LineFillStyleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\PolygonStyle\MarkerFillStyleEditor.resx">
+      <DependentUpon>MarkerFillStyleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\PolygonStyle\PictureFillStyleEditor.cs.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\PolygonStyle\SimpleFillStyleEditor.resx">
+      <DependentUpon>SimpleFillStyleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\StyleEditorContentControl.resx">
+      <DependentUpon>StyleEditorContentControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\StyleHelpForm.resx">
+      <DependentUpon>StyleHelpForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\StyleLayerEditor.resx">
+      <DependentUpon>StyleLayerEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\StylePreviewControl.resx">
+      <DependentUpon>StylePreviewControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\SymbolControlForm.resx">
+      <DependentUpon>SymbolControlForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleEditor\TextStyle\TextSymbolStyleEditor.resx">
+      <DependentUpon>TextSymbolStyleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleNameDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StyleNameDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="StyleClass.cs" />
+    <Compile Include="StyleEditor\IStyleEditor.cs" />
+    <Compile Include="StyleEditor\LineStyle\CartographicLineStyleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\LineStyle\CartographicLineStyleEditor.Designer.cs">
+      <DependentUpon>CartographicLineStyleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\LineStyle\HashLineStyleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\LineStyle\HashLineStyleEditor.Designer.cs">
+      <DependentUpon>HashLineStyleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\LineStyle\LineStyleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\LineStyle\LineStyleEditor.Designer.cs">
+      <DependentUpon>LineStyleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\LineStyle\MarkerLineStyleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\LineStyle\MarkerLineStyleEditor.Designer.cs">
+      <DependentUpon>MarkerLineStyleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\LineStyle\PictureLineStyleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\LineStyle\PictureLineStyleEditor.Designer.cs">
+      <DependentUpon>PictureLineStyleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\LineStyle\SimpleLineStyleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\LineStyle\SimpleLineStyleEditor.Designer.cs">
+      <DependentUpon>SimpleLineStyleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\PointStyle\ArrowMarkerStyleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\PointStyle\ArrowMarkerStyleEditor.Designer.cs">
+      <DependentUpon>ArrowMarkerStyleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\PointStyle\CharacterMarkerStyleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\PointStyle\CharacterMarkerStyleEditor.Designer.cs">
+      <DependentUpon>CharacterMarkerStyleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\PointStyle\PictureMarkerStyleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\PointStyle\PictureMarkerStyleEditor.Designer.cs">
+      <DependentUpon>PictureMarkerStyleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\PointStyle\SimpleMarkerStyleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\PointStyle\SimpleMarkerStyleEditor.Designer.cs">
+      <DependentUpon>SimpleMarkerStyleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\PolygonStyle\DotDensityFillStyleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\PolygonStyle\DotDensityFillStyleEditor.Designer.cs">
+      <DependentUpon>DotDensityFillStyleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\PolygonStyle\GradientFillStyleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\PolygonStyle\GradientFillStyleEditor.Designer.cs">
+      <DependentUpon>GradientFillStyleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\PolygonStyle\LineFillStyleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\PolygonStyle\LineFillStyleEditor.Designer.cs">
+      <DependentUpon>LineFillStyleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\PolygonStyle\MarkerFillStyleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\PolygonStyle\MarkerFillStyleEditor.Designer.cs">
+      <DependentUpon>MarkerFillStyleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\PolygonStyle\PictureFillStyleEditor.cs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\PolygonStyle\PictureFillStyleEditor.cs.Designer.cs">
+      <DependentUpon>PictureFillStyleEditor.cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\PolygonStyle\SimpleFillStyleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\PolygonStyle\SimpleFillStyleEditor.Designer.cs">
+      <DependentUpon>SimpleFillStyleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\StyleEditorContentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\StyleEditorContentControl.Designer.cs">
+      <DependentUpon>StyleEditorContentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\StyleEditorEvents.cs" />
+    <Compile Include="StyleEditor\StyleHelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\StyleHelpForm.Designer.cs">
+      <DependentUpon>StyleHelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\StyleLayer.cs" />
+    <Compile Include="StyleEditor\StyleLayerEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\StyleLayerEditor.Designer.cs">
+      <DependentUpon>StyleLayerEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\StylePreviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\StylePreviewControl.Designer.cs">
+      <DependentUpon>StylePreviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\SymbolControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\SymbolControlForm.Designer.cs">
+      <DependentUpon>SymbolControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleEditor\TextStyle\TextSymbolStyleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StyleEditor\TextStyle\TextSymbolStyleEditor.Designer.cs">
+      <DependentUpon>TextSymbolStyleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleNameDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StyleNameDlg.Designer.cs">
+      <DependentUpon>StyleNameDlg.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Draw.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

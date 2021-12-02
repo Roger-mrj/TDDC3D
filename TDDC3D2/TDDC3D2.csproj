@@ -1,0 +1,1878 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CDB9FC6A-775C-41E8-95DE-710F062C107A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TDDC3D</RootNamespace>
+    <AssemblyName>三调建库</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>if_globe-01_374631.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\packages\ADODB.7.10.3077\lib\adodb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\..\..\..\..\迅雷下载\ASPOSEdll\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v14.1.Core, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.1.UI, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.1.Wizard, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.3DAnalyst, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Connection.Local, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AnalysisTools, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ConversionTools, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataManagementTools, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesOleDB, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRaster, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessing, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessor, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.Geoprocessor.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GlobeCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Output, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="analysis\bbfxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="analysis\bbfxForm.Designer.cs">
+      <DependentUpon>bbfxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="analysis\DrawingTool.cs" />
+    <Compile Include="analysis\Gd2TKForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="analysis\Gd2TKForm.Designer.cs">
+      <DependentUpon>Gd2TKForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="analysis\GdNbBhForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="analysis\GdNbBhForm.Designer.cs">
+      <DependentUpon>GdNbBhForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="analysis\GetLL2d23dForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="analysis\GetLL2d23dForm.Designer.cs">
+      <DependentUpon>GetLL2d23dForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="analysis\JsnbhFxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="analysis\JsnbhFxForm.Designer.cs">
+      <DependentUpon>JsnbhFxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="analysis\KcdjfxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="analysis\KcdjfxForm.Designer.cs">
+      <DependentUpon>KcdjfxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="analysis\N2WFxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="analysis\N2WFxForm.Designer.cs">
+      <DependentUpon>N2WFxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="analysis\NewCZCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="analysis\NewCZCForm.Designer.cs">
+      <DependentUpon>NewCZCForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="analysis\PickChangeDLTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="analysis\PickChangeDLTB.Designer.cs">
+      <DependentUpon>PickChangeDLTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="analysis\TdlyjgfxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="analysis\TdlyjgfxForm.Designer.cs">
+      <DependentUpon>TdlyjgfxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="analysis\TK2GdFxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="analysis\TK2GdFxForm.Designer.cs">
+      <DependentUpon>TK2GdFxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="analysis\XzgdFxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="analysis\XzgdFxForm.Designer.cs">
+      <DependentUpon>XzgdFxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="analysis\XzjsydfxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="analysis\XzjsydfxForm.Designer.cs">
+      <DependentUpon>XzjsydfxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\BSMRebuildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\BSMRebuildForm.Designer.cs">
+      <DependentUpon>BSMRebuildForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\BSMWHForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\BSMWHForm.Designer.cs">
+      <DependentUpon>BSMWHForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\BuildZjForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\BuildZjForm.Designer.cs">
+      <DependentUpon>BuildZjForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\CalmjandTpFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\CalmjandTpFrm.Designer.cs">
+      <DependentUpon>CalmjandTpFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\DissovleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\DissovleForm.Designer.cs">
+      <DependentUpon>DissovleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\DMMCWHForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\DMMCWHForm.Designer.cs">
+      <DependentUpon>DMMCWHForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\Features2PolygonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\Features2PolygonForm.Designer.cs">
+      <DependentUpon>Features2PolygonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\FrmCheckDLTBGX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\FrmCheckDLTBGX.Designer.cs">
+      <DependentUpon>FrmCheckDLTBGX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\FrmDataOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\FrmDataOut.Designer.cs">
+      <DependentUpon>FrmDataOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\FrmExcel2SHP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\FrmExcel2SHP.Designer.cs">
+      <DependentUpon>FrmExcel2SHP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\GddbSetValForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\GddbSetValForm.Designer.cs">
+      <DependentUpon>GddbSetValForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\GdxhdmSetvalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\GdxhdmSetvalForm.Designer.cs">
+      <DependentUpon>GdxhdmSetvalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\JbCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\JbCheckForm.Designer.cs">
+      <DependentUpon>JbCheckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\JdmdQueryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\JdmdQueryForm.Designer.cs">
+      <DependentUpon>JdmdQueryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\JxxzSetValueForm1cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\JxxzSetValueForm1cs.Designer.cs">
+      <DependentUpon>JxxzSetValueForm1cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\MakeTFCommand.cs" />
+    <Compile Include="datado\PDTSetValueFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\PDTSetValueFrm.Designer.cs">
+      <DependentUpon>PDTSetValueFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\SetValByWhereForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\SetValByWhereForm.Designer.cs">
+      <DependentUpon>SetValByWhereForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\TFHFactory2.cs" />
+    <Compile Include="datado\TFHInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\TFHInfoForm.Designer.cs">
+      <DependentUpon>TFHInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\TFHObject.cs" />
+    <Compile Include="datado\TKXSWhForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\TKXSWhForm.Designer.cs">
+      <DependentUpon>TKXSWhForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\GetCZCDYDByDltb3Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\GetCZCDYDByDltb3Form.Designer.cs">
+      <DependentUpon>GetCZCDYDByDltb3Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\MapIntegrateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\MapIntegrateForm.Designer.cs">
+      <DependentUpon>MapIntegrateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\MergeDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\MergeDatabase.Designer.cs">
+      <DependentUpon>MergeDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\SearchEdgeTbForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\SearchEdgeTbForm.Designer.cs">
+      <DependentUpon>SearchEdgeTbForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\SetHoleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\SetHoleForm.Designer.cs">
+      <DependentUpon>SetHoleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\SetQsdwdmFrmByExtent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\SetQsdwdmFrmByExtent.Designer.cs">
+      <DependentUpon>SetQsdwdmFrmByExtent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\SmallTbDoHelper.cs" />
+    <Compile Include="edit\SmoothPolygonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\SmoothPolygonForm.Designer.cs">
+      <DependentUpon>SmoothPolygonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\TBHBBySxFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\TBHBBySxFrm.Designer.cs">
+      <DependentUpon>TBHBBySxFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\UnionSelTBPatchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\UnionSelTBPatchForm.Designer.cs">
+      <DependentUpon>UnionSelTBPatchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\XxdwkdSetValForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\XxdwkdSetValForm.Designer.cs">
+      <DependentUpon>XxdwkdSetValForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\XzdwTbhPreBgDoSmallForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\XzdwTbhPreBgDoSmallForm.Designer.cs">
+      <DependentUpon>XzdwTbhPreBgDoSmallForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\ZDQlrForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\ZDQlrForm.Designer.cs">
+      <DependentUpon>ZDQlrForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\ZdSplitDltbOptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\ZdSplitDltbOptForm.Designer.cs">
+      <DependentUpon>ZdSplitDltbOptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\ZdszWhCommand.cs" />
+    <Compile Include="edit\SelectSplitDltbOptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\SelectSplitDltbOptForm.Designer.cs">
+      <DependentUpon>SelectSplitDltbOptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\CjdcqSplitDltbOptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\CjdcqSplitDltbOptForm.Designer.cs">
+      <DependentUpon>CjdcqSplitDltbOptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gdzy\FrmBSMGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gdzy\FrmBSMGD.designer.cs">
+      <DependentUpon>FrmBSMGD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gdzy\FrmDYBHGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gdzy\FrmDYBHGD.Designer.cs">
+      <DependentUpon>FrmDYBHGD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gdzy\FrmGetGDData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gdzy\FrmGetGDData.Designer.cs">
+      <DependentUpon>FrmGetGDData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gdzy\FrmGetOtherByFLDY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gdzy\FrmGetOtherByFLDY.Designer.cs">
+      <DependentUpon>FrmGetOtherByFLDY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gdzy\FrmGetSpatialAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gdzy\FrmGetSpatialAttribute.Designer.cs">
+      <DependentUpon>FrmGetSpatialAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gdzy\FrmOutGDResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gdzy\FrmOutGDResult.Designer.cs">
+      <DependentUpon>FrmOutGDResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gdzy\FrmResultReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gdzy\FrmResultReport.Designer.cs">
+      <DependentUpon>FrmResultReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmAddFields.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmAddFields.Designer.cs">
+      <DependentUpon>FrmAddFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\BHTBSXPCL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\BHTBSXPCL.Designer.cs">
+      <DependentUpon>BHTBSXPCL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmAKeyProcessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmAKeyProcessing.Designer.cs">
+      <DependentUpon>FrmAKeyProcessing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmBGOpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmBGOpt.Designer.cs">
+      <DependentUpon>FrmBGOpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmBHCJDCQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmBHCJDCQ.Designer.cs">
+      <DependentUpon>FrmBHCJDCQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmBHDLTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmBHDLTB.Designer.cs">
+      <DependentUpon>FrmBHDLTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmBSM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmBSM.Designer.cs">
+      <DependentUpon>FrmBSM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmBSMOpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmBSMOpt.Designer.cs">
+      <DependentUpon>FrmBSMOpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmCheckData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmCheckData.Designer.cs">
+      <DependentUpon>FrmCheckData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmCheckGraphics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmCheckGraphics.Designer.cs">
+      <DependentUpon>FrmCheckGraphics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmCJDCQGX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmCJDCQGX.Designer.cs">
+      <DependentUpon>FrmCJDCQGX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmCJDCQGXGC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmCJDCQGXGC.Designer.cs">
+      <DependentUpon>FrmCJDCQGXGC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmCJDCQJXGX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmCJDCQJXGX.Designer.cs">
+      <DependentUpon>FrmCJDCQJXGX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmCJDCQSXPCL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmCJDCQSXPCL.Designer.cs">
+      <DependentUpon>FrmCJDCQSXPCL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmCreateProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmCreateProcess.Designer.cs">
+      <DependentUpon>FrmCreateProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmDealAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmDealAttribute.Designer.cs">
+      <DependentUpon>FrmDealAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmDLTBCZCSX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmDLTBCZCSX.Designer.cs">
+      <DependentUpon>FrmDLTBCZCSX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmDLTBGX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmDLTBGX.Designer.cs">
+      <DependentUpon>FrmDLTBGX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmDLTBGXGC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmDLTBGXGC.Designer.cs">
+      <DependentUpon>FrmDLTBGXGC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmGetChangeTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmGetChangeTB.Designer.cs">
+      <DependentUpon>FrmGetChangeTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmGetXzqGX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmGetXzqGX.Designer.cs">
+      <DependentUpon>FrmGetXzqGX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmOutputResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmOutputResult.Designer.cs">
+      <DependentUpon>FrmOutputResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmOutSXTJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmOutSXTJ.Designer.cs">
+      <DependentUpon>FrmOutSXTJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmReport.Designer.cs">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmSCNMSJK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmSCNMSJK.Designer.cs">
+      <DependentUpon>FrmSCNMSJK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmSpatialUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmSpatialUpdate.Designer.cs">
+      <DependentUpon>FrmSpatialUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmSummary.Designer.cs">
+      <DependentUpon>FrmSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmTBBHOpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmTBBHOpt.Designer.cs">
+      <DependentUpon>FrmTBBHOpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmTBBHOpt2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmTBBHOpt2.Designer.cs">
+      <DependentUpon>FrmTBBHOpt2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmTBGXSplit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmTBGXSplit.Designer.cs">
+      <DependentUpon>FrmTBGXSplit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmVCTOutput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmVCTOutput.Designer.cs">
+      <DependentUpon>FrmVCTOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmXZQGX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmXZQGX.Designer.cs">
+      <DependentUpon>FrmXZQGX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmXZQGXGC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmXZQGXGC.Designer.cs">
+      <DependentUpon>FrmXZQGXGC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmXZQJXGX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmXZQJXGX.Designer.cs">
+      <DependentUpon>FrmXZQJXGX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmXZQSXPLGX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmXZQSXPLGX.Designer.cs">
+      <DependentUpon>FrmXZQSXPLGX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\FrmXZQTZLX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\FrmXZQTZLX.Designer.cs">
+      <DependentUpon>FrmXZQTZLX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gengxin\LsGxClass.cs" />
+    <Compile Include="gengxin\XzqGengxinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gengxin\XzqGengxinForm.Designer.cs">
+      <DependentUpon>XzqGengxinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="history\DltbHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="history\DltbHistoryForm.Designer.cs">
+      <DependentUpon>DltbHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="history\GetGXGCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="history\GetGXGCForm.Designer.cs">
+      <DependentUpon>GetGXGCForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="history\GxHistoryHelper.cs" />
+    <Compile Include="output\clsOutputData.cs" />
+    <Compile Include="output\clsStatsJbnt2.cs" />
+    <Compile Include="output\clsStatsPzwjs.cs" />
+    <Compile Include="output\clsStatsWRHD.cs" />
+    <Compile Include="output\clsStatsYjjbnt.cs" />
+    <Compile Include="output\FrmCreateTFH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="output\FrmCreateTFH.Designer.cs">
+      <DependentUpon>FrmCreateTFH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="output\FrmExportKZMJJHB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="output\FrmExportKZMJJHB.Designer.cs">
+      <DependentUpon>FrmExportKZMJJHB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="output\FrmOutRsTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="output\FrmOutRsTable.Designer.cs">
+      <DependentUpon>FrmOutRsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="output\FrmOutTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="output\FrmOutTable.Designer.cs">
+      <DependentUpon>FrmOutTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="output\OutPutMDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="output\OutPutMDB.Designer.cs">
+      <DependentUpon>OutPutMDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="output\OutStandardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="output\OutStandardForm.Designer.cs">
+      <DependentUpon>OutStandardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="output\OutXzqDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="output\OutXzqDataForm.Designer.cs">
+      <DependentUpon>OutXzqDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="raster\AspectFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raster\AspectFrm.Designer.cs">
+      <DependentUpon>AspectFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="raster\Raster2PolygonFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raster\Raster2PolygonFrm.Designer.cs">
+      <DependentUpon>Raster2PolygonFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="raster\RasterInfoClass.cs" />
+    <Compile Include="raster\RasterInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raster\RasterInfoForm.Designer.cs">
+      <DependentUpon>RasterInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="raster\RasterReClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raster\RasterReClassForm.Designer.cs">
+      <DependentUpon>RasterReClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="raster\rasterRenderFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raster\rasterRenderFrm.Designer.cs">
+      <DependentUpon>rasterRenderFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="raster\SlopeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raster\SlopeForm.Designer.cs">
+      <DependentUpon>SlopeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rulecheck\createTopologyFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rulecheck\createTopologyFrm.Designer.cs">
+      <DependentUpon>createTopologyFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\DLChangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\DLChangeForm.Designer.cs">
+      <DependentUpon>DLChangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\DoDuplicateForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\DoDuplicateForm2.Designer.cs">
+      <DependentUpon>DoDuplicateForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\GeneralStatsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\GeneralStatsForm.Designer.cs">
+      <DependentUpon>GeneralStatsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\IntersecPolygonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\IntersecPolygonForm.Designer.cs">
+      <DependentUpon>IntersecPolygonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\KzmjTpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\KzmjTpForm.Designer.cs">
+      <DependentUpon>KzmjTpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\TbbhSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\TbbhSetForm.Designer.cs">
+      <DependentUpon>TbbhSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\TbdlmjCalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\TbdlmjCalForm.Designer.cs">
+      <DependentUpon>TbdlmjCalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rulecheck\RuleCheck5.cs" />
+    <Compile Include="rulecheck\TopManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rulecheck\TopManagerForm.Designer.cs">
+      <DependentUpon>TopManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datado\ZldwSetValueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datado\ZldwSetValueForm.Designer.cs">
+      <DependentUpon>ZldwSetValueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\CutTbWithoutSelectTask.cs" />
+    <Compile Include="edit\DelOutXianTbForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\DelOutXianTbForm.Designer.cs">
+      <DependentUpon>DelOutXianTbForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\DelVertexTool.cs" />
+    <Compile Include="edit\DLTBUnionCommand.cs" />
+    <Compile Include="edit\DoBreakedTbForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\DoBreakedTbForm.Designer.cs">
+      <DependentUpon>DoBreakedTbForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\EditPropertySetValueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\EditPropertySetValueForm.Designer.cs">
+      <DependentUpon>EditPropertySetValueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\GetJZDCommand.cs" />
+    <Compile Include="edit\GetJzdOptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\GetJzdOptForm.Designer.cs">
+      <DependentUpon>GetJzdOptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\GetPolygonBoundaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\GetPolygonBoundaryForm.Designer.cs">
+      <DependentUpon>GetPolygonBoundaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\InsertVertexTool.cs" />
+    <Compile Include="edit\LxdwMsCommand.cs" />
+    <Compile Include="edit\MultipartDoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\MultipartDoForm.Designer.cs">
+      <DependentUpon>MultipartDoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\PatchBGOptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\PatchBGOptForm.Designer.cs">
+      <DependentUpon>PatchBGOptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\Polygon2LineFeatureCommand.cs" />
+    <Compile Include="edit\SetZldwdmByExtentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\SetZldwdmByExtentForm.Designer.cs">
+      <DependentUpon>SetZldwdmByExtentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\SmallDltbMergeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\SmallDltbMergeForm.Designer.cs">
+      <DependentUpon>SmallDltbMergeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\TbFeatureMergeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\TbFeatureMergeForm.Designer.cs">
+      <DependentUpon>TbFeatureMergeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\TBHBOptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\TBHBOptionForm.Designer.cs">
+      <DependentUpon>TBHBOptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\TbmjCalculateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\TbmjCalculateForm.Designer.cs">
+      <DependentUpon>TbmjCalculateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\TbMultiBGTask.cs" />
+    <Compile Include="edit\Xzdw2DltbCommand.cs" />
+    <Compile Include="edit\Xzdw2WhereOptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\Xzdw2WhereOptForm.Designer.cs">
+      <DependentUpon>Xzdw2WhereOptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit\XzdwmsCommand.cs" />
+    <Compile Include="edit\XzqSplitDltbOptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit\XzqSplitDltbOptForm.Designer.cs">
+      <DependentUpon>XzqSplitDltbOptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LSMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LSMainForm.Designer.cs">
+      <DependentUpon>LSMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="output\ClsTP.cs" />
+    <Compile Include="output\LSOutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="output\LSOutForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="output\LSOutForm2.Designer.cs">
+      <DependentUpon>LSOutForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="output\LSOutTool.cs" />
+    <Compile Include="output\LSOutTool2.cs" />
+    <Compile Include="output\StatesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="output\StatesForm.Designer.cs">
+      <DependentUpon>StatesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="raster\clipRasterFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raster\clipRasterFrm.Designer.cs">
+      <DependentUpon>clipRasterFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="raster\MosaicDsManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raster\MosaicDsManageForm.Designer.cs">
+      <DependentUpon>MosaicDsManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="raster\NewMosaicDsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raster\NewMosaicDsForm.Designer.cs">
+      <DependentUpon>NewMosaicDsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="raster\RasterNoDatavalueFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raster\RasterNoDatavalueFrm.Designer.cs">
+      <DependentUpon>RasterNoDatavalueFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="raster\RasterSlopeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raster\RasterSlopeForm.Designer.cs">
+      <DependentUpon>RasterSlopeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rulecheck\ACheckErrorObj.cs" />
+    <Compile Include="rulecheck\AutoCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rulecheck\AutoCheckForm.Designer.cs">
+      <DependentUpon>AutoCheckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rulecheck\CheckErrorHelper.cs" />
+    <Compile Include="rulecheck\RuleCheck2.cs" />
+    <Compile Include="rulecheck\RuleCheck3.cs" />
+    <Compile Include="rulecheck\RuleCheck4.cs" />
+    <Compile Include="rulecheck\TableSchemaRead.cs" />
+    <Compile Include="rulecheck\RuleCheck6.cs" />
+    <Compile Include="sxvalue\DltbSetValueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sxvalue\DltbSetValueForm.Designer.cs">
+      <DependentUpon>DltbSetValueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\AltSpatialRefForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\AltSpatialRefForm.Designer.cs">
+      <DependentUpon>AltSpatialRefForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\AppendFCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\AppendFCForm.Designer.cs">
+      <DependentUpon>AppendFCForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\BackupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\BackupForm.Designer.cs">
+      <DependentUpon>BackupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\clsLayerFilter.cs" />
+    <Compile Include="sys\ConstructBZKForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\ConstructBZKForm.Designer.cs">
+      <DependentUpon>ConstructBZKForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\ControlsSynchronizer.cs" />
+    <Compile Include="sys\CopyFeatureClassFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\CopyFeatureClassFrm.Designer.cs">
+      <DependentUpon>CopyFeatureClassFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\copyFeatureStructFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\copyFeatureStructFrm.Designer.cs">
+      <DependentUpon>copyFeatureStructFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\DictionaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\DictionaryForm.Designer.cs">
+      <DependentUpon>DictionaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\FrmCoordinateSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\FrmCoordinateSystem.designer.cs">
+      <DependentUpon>FrmCoordinateSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\InAFeatureClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\InAFeatureClassForm.Designer.cs">
+      <DependentUpon>InAFeatureClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\InQsdwdmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\InQsdwdmForm.Designer.cs">
+      <DependentUpon>InQsdwdmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\LayerSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\LayerSelectForm.Designer.cs">
+      <DependentUpon>LayerSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\Maps.cs" />
+    <Compile Include="sys\NewDatasetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\NewDatasetForm.Designer.cs">
+      <DependentUpon>NewDatasetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\NewFeatureClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\NewFeatureClassForm.Designer.cs">
+      <DependentUpon>NewFeatureClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\NewFieldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\NewFieldForm.Designer.cs">
+      <DependentUpon>NewFieldForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\NewTopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\NewTopForm.Designer.cs">
+      <DependentUpon>NewTopForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\OtherSetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\OtherSetupForm.Designer.cs">
+      <DependentUpon>OtherSetupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\QuickImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\QuickImportForm.Designer.cs">
+      <DependentUpon>QuickImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\QuickImportForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\QuickImportForm2.Designer.cs">
+      <DependentUpon>QuickImportForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\QuickImportForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\QuickImportForm3.Designer.cs">
+      <DependentUpon>QuickImportForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\RegSoftForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\RegSoftForm.Designer.cs">
+      <DependentUpon>RegSoftForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\RenameFeatureclassFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\RenameFeatureclassFrm.Designer.cs">
+      <DependentUpon>RenameFeatureclassFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\TableStructForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\TableStructForm.Designer.cs">
+      <DependentUpon>TableStructForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\WorkspaceSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\WorkspaceSelectForm.Designer.cs">
+      <DependentUpon>WorkspaceSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\YsdmSetValueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sys\YsdmSetValueForm.Designer.cs">
+      <DependentUpon>YsdmSetValueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sys\YWCommonHelper.cs" />
+    <Compile Include="zrzy\CzcdydTqForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zrzy\CzcdydTqForm.Designer.cs">
+      <DependentUpon>CzcdydTqForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zrzy\JBNTTBBHSetValForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zrzy\JBNTTBBHSetValForm.Designer.cs">
+      <DependentUpon>JBNTTBBHSetValForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zrzy\JBNTTBTqOptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zrzy\JBNTTBTqOptForm.Designer.cs">
+      <DependentUpon>JBNTTBTqOptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zrzy\zrzyTbTqFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zrzy\zrzyTbTqFrm.Designer.cs">
+      <DependentUpon>zrzyTbTqFrm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="analysis\bbfxForm.resx">
+      <DependentUpon>bbfxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="analysis\Gd2TKForm.resx">
+      <DependentUpon>Gd2TKForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="analysis\GdNbBhForm.resx">
+      <DependentUpon>GdNbBhForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="analysis\GetLL2d23dForm.resx">
+      <DependentUpon>GetLL2d23dForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="analysis\JsnbhFxForm.resx">
+      <DependentUpon>JsnbhFxForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="analysis\KcdjfxForm.resx">
+      <DependentUpon>KcdjfxForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="analysis\N2WFxForm.resx">
+      <DependentUpon>N2WFxForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="analysis\NewCZCForm.resx">
+      <DependentUpon>NewCZCForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="analysis\PickChangeDLTB.resx">
+      <DependentUpon>PickChangeDLTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="analysis\TdlyjgfxForm.resx">
+      <DependentUpon>TdlyjgfxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="analysis\TK2GdFxForm.resx">
+      <DependentUpon>TK2GdFxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="analysis\XzgdFxForm.resx">
+      <DependentUpon>XzgdFxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="analysis\XzjsydfxForm.resx">
+      <DependentUpon>XzjsydfxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\BSMRebuildForm.resx">
+      <DependentUpon>BSMRebuildForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\BSMWHForm.resx">
+      <DependentUpon>BSMWHForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\BuildZjForm.resx">
+      <DependentUpon>BuildZjForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\CalmjandTpFrm.resx">
+      <DependentUpon>CalmjandTpFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\DissovleForm.resx">
+      <DependentUpon>DissovleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\DMMCWHForm.resx">
+      <DependentUpon>DMMCWHForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\Features2PolygonForm.resx">
+      <DependentUpon>Features2PolygonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\FrmCheckDLTBGX.resx">
+      <DependentUpon>FrmCheckDLTBGX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\FrmDataOut.resx">
+      <DependentUpon>FrmDataOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\FrmExcel2SHP.resx">
+      <DependentUpon>FrmExcel2SHP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\GddbSetValForm.resx">
+      <DependentUpon>GddbSetValForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\GdxhdmSetvalForm.resx">
+      <DependentUpon>GdxhdmSetvalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\JbCheckForm.resx">
+      <DependentUpon>JbCheckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\JdmdQueryForm.resx">
+      <DependentUpon>JdmdQueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\JxxzSetValueForm1cs.resx">
+      <DependentUpon>JxxzSetValueForm1cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\PDTSetValueFrm.resx">
+      <DependentUpon>PDTSetValueFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\SetValByWhereForm.resx">
+      <DependentUpon>SetValByWhereForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\TFHInfoForm.resx">
+      <DependentUpon>TFHInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\TKXSWhForm.resx">
+      <DependentUpon>TKXSWhForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\GetCZCDYDByDltb3Form.resx">
+      <DependentUpon>GetCZCDYDByDltb3Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\MapIntegrateForm.resx">
+      <DependentUpon>MapIntegrateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\MergeDatabase.resx">
+      <DependentUpon>MergeDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\SearchEdgeTbForm.resx">
+      <DependentUpon>SearchEdgeTbForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\SetHoleForm.resx">
+      <DependentUpon>SetHoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\SetQsdwdmFrmByExtent.resx">
+      <DependentUpon>SetQsdwdmFrmByExtent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\SmoothPolygonForm.resx">
+      <DependentUpon>SmoothPolygonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\TBHBBySxFrm.resx">
+      <DependentUpon>TBHBBySxFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\UnionSelTBPatchForm.resx">
+      <DependentUpon>UnionSelTBPatchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\XxdwkdSetValForm.resx">
+      <DependentUpon>XxdwkdSetValForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\XzdwTbhPreBgDoSmallForm.resx">
+      <DependentUpon>XzdwTbhPreBgDoSmallForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\ZDQlrForm.resx">
+      <DependentUpon>ZDQlrForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\ZdSplitDltbOptForm.resx">
+      <DependentUpon>ZdSplitDltbOptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\SelectSplitDltbOptForm.resx">
+      <DependentUpon>SelectSplitDltbOptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\CjdcqSplitDltbOptForm.resx">
+      <DependentUpon>CjdcqSplitDltbOptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gdzy\FrmBSMGD.resx">
+      <DependentUpon>FrmBSMGD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gdzy\FrmDYBHGD.resx">
+      <DependentUpon>FrmDYBHGD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gdzy\FrmGetGDData.resx">
+      <DependentUpon>FrmGetGDData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gdzy\FrmGetOtherByFLDY.resx">
+      <DependentUpon>FrmGetOtherByFLDY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gdzy\FrmGetSpatialAttribute.resx">
+      <DependentUpon>FrmGetSpatialAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gdzy\FrmOutGDResult.resx">
+      <DependentUpon>FrmOutGDResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gdzy\FrmResultReport.resx">
+      <DependentUpon>FrmResultReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmAddFields.resx">
+      <DependentUpon>FrmAddFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\BHTBSXPCL.resx">
+      <DependentUpon>BHTBSXPCL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmAKeyProcessing.resx">
+      <DependentUpon>FrmAKeyProcessing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmBGOpt.resx">
+      <DependentUpon>FrmBGOpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmBHCJDCQ.resx">
+      <DependentUpon>FrmBHCJDCQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmBHDLTB.resx">
+      <DependentUpon>FrmBHDLTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmBSM.resx">
+      <DependentUpon>FrmBSM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmBSMOpt.resx">
+      <DependentUpon>FrmBSMOpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmCheckData.resx">
+      <DependentUpon>FrmCheckData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmCheckGraphics.resx">
+      <DependentUpon>FrmCheckGraphics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmCJDCQGX.resx">
+      <DependentUpon>FrmCJDCQGX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmCJDCQGXGC.resx">
+      <DependentUpon>FrmCJDCQGXGC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmCJDCQJXGX.resx">
+      <DependentUpon>FrmCJDCQJXGX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmCJDCQSXPCL.resx">
+      <DependentUpon>FrmCJDCQSXPCL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmCreateProcess.resx">
+      <DependentUpon>FrmCreateProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmDealAttribute.resx">
+      <DependentUpon>FrmDealAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmDLTBCZCSX.resx">
+      <DependentUpon>FrmDLTBCZCSX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmDLTBGX.resx">
+      <DependentUpon>FrmDLTBGX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmDLTBGXGC.resx">
+      <DependentUpon>FrmDLTBGXGC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmGetChangeTB.resx">
+      <DependentUpon>FrmGetChangeTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmGetXzqGX.resx">
+      <DependentUpon>FrmGetXzqGX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmOutputResult.resx">
+      <DependentUpon>FrmOutputResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmOutSXTJ.resx">
+      <DependentUpon>FrmOutSXTJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmReport.resx">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmSCNMSJK.resx">
+      <DependentUpon>FrmSCNMSJK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmSpatialUpdate.resx">
+      <DependentUpon>FrmSpatialUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmSummary.resx">
+      <DependentUpon>FrmSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmTBBHOpt.resx">
+      <DependentUpon>FrmTBBHOpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmTBBHOpt2.resx">
+      <DependentUpon>FrmTBBHOpt2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmTBGXSplit.resx">
+      <DependentUpon>FrmTBGXSplit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmVCTOutput.resx">
+      <DependentUpon>FrmVCTOutput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmXZQGX.resx">
+      <DependentUpon>FrmXZQGX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmXZQGXGC.resx">
+      <DependentUpon>FrmXZQGXGC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmXZQJXGX.resx">
+      <DependentUpon>FrmXZQJXGX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmXZQSXPLGX.resx">
+      <DependentUpon>FrmXZQSXPLGX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\FrmXZQTZLX.resx">
+      <DependentUpon>FrmXZQTZLX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gengxin\XzqGengxinForm.resx">
+      <DependentUpon>XzqGengxinForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="history\DltbHistoryForm.resx">
+      <DependentUpon>DltbHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="history\GetGXGCForm.resx">
+      <DependentUpon>GetGXGCForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="output\FrmCreateTFH.resx">
+      <DependentUpon>FrmCreateTFH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="output\FrmExportKZMJJHB.resx">
+      <DependentUpon>FrmExportKZMJJHB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="output\FrmOutRsTable.resx">
+      <DependentUpon>FrmOutRsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="output\FrmOutTable.resx">
+      <DependentUpon>FrmOutTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="output\OutPutMDB.resx">
+      <DependentUpon>OutPutMDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="output\OutStandardForm.resx">
+      <DependentUpon>OutStandardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="output\OutXzqDataForm.resx">
+      <DependentUpon>OutXzqDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="raster\AspectFrm.resx">
+      <DependentUpon>AspectFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="raster\Raster2PolygonFrm.resx">
+      <DependentUpon>Raster2PolygonFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="raster\RasterInfoForm.resx">
+      <DependentUpon>RasterInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="raster\RasterReClassForm.resx">
+      <DependentUpon>RasterReClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="raster\rasterRenderFrm.resx">
+      <DependentUpon>rasterRenderFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="raster\SlopeForm.resx">
+      <DependentUpon>SlopeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rulecheck\createTopologyFrm.resx">
+      <DependentUpon>createTopologyFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\DLChangeForm.resx">
+      <DependentUpon>DLChangeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\DoDuplicateForm2.resx">
+      <DependentUpon>DoDuplicateForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\GeneralStatsForm.resx">
+      <DependentUpon>GeneralStatsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\IntersecPolygonForm.resx">
+      <DependentUpon>IntersecPolygonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\KzmjTpForm.resx">
+      <DependentUpon>KzmjTpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\TbbhSetForm.resx">
+      <DependentUpon>TbbhSetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\TbdlmjCalForm.resx">
+      <DependentUpon>TbdlmjCalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rulecheck\TopManagerForm.resx">
+      <DependentUpon>TopManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datado\ZldwSetValueForm.resx">
+      <DependentUpon>ZldwSetValueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\DelOutXianTbForm.resx">
+      <DependentUpon>DelOutXianTbForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\DoBreakedTbForm.resx">
+      <DependentUpon>DoBreakedTbForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\EditPropertySetValueForm.resx">
+      <DependentUpon>EditPropertySetValueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\GetJzdOptForm.resx">
+      <DependentUpon>GetJzdOptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\GetPolygonBoundaryForm.resx">
+      <DependentUpon>GetPolygonBoundaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\MultipartDoForm.resx">
+      <DependentUpon>MultipartDoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\PatchBGOptForm.resx">
+      <DependentUpon>PatchBGOptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\SetZldwdmByExtentForm.resx">
+      <DependentUpon>SetZldwdmByExtentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\SmallDltbMergeForm.resx">
+      <DependentUpon>SmallDltbMergeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\TbFeatureMergeForm.resx">
+      <DependentUpon>TbFeatureMergeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\TBHBOptionForm.resx">
+      <DependentUpon>TBHBOptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\TbmjCalculateForm.resx">
+      <DependentUpon>TbmjCalculateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\Xzdw2WhereOptForm.resx">
+      <DependentUpon>Xzdw2WhereOptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit\XzqSplitDltbOptForm.resx">
+      <DependentUpon>XzqSplitDltbOptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LSMainForm.resx">
+      <DependentUpon>LSMainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="output\LSOutForm.resx">
+      <DependentUpon>LSOutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="output\LSOutForm2.resx">
+      <DependentUpon>LSOutForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="output\StatesForm.resx">
+      <DependentUpon>StatesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="raster\clipRasterFrm.resx">
+      <DependentUpon>clipRasterFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="raster\MosaicDsManageForm.resx">
+      <DependentUpon>MosaicDsManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="raster\NewMosaicDsForm.resx">
+      <DependentUpon>NewMosaicDsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="raster\RasterNoDatavalueFrm.resx">
+      <DependentUpon>RasterNoDatavalueFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="raster\RasterSlopeForm.resx">
+      <DependentUpon>RasterSlopeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rulecheck\AutoCheckForm.resx">
+      <DependentUpon>AutoCheckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sxvalue\DltbSetValueForm.resx">
+      <DependentUpon>DltbSetValueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\AltSpatialRefForm.resx">
+      <DependentUpon>AltSpatialRefForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\AppendFCForm.resx">
+      <DependentUpon>AppendFCForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\BackupForm.resx">
+      <DependentUpon>BackupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\ConstructBZKForm.resx">
+      <DependentUpon>ConstructBZKForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\CopyFeatureClassFrm.resx">
+      <DependentUpon>CopyFeatureClassFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\copyFeatureStructFrm.resx">
+      <DependentUpon>copyFeatureStructFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\DictionaryForm.resx">
+      <DependentUpon>DictionaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\FrmCoordinateSystem.resx">
+      <DependentUpon>FrmCoordinateSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\InAFeatureClassForm.resx">
+      <DependentUpon>InAFeatureClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\InQsdwdmForm.resx">
+      <DependentUpon>InQsdwdmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\LayerSelectForm.resx">
+      <DependentUpon>LayerSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\NewDatasetForm.resx">
+      <DependentUpon>NewDatasetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\NewFeatureClassForm.resx">
+      <DependentUpon>NewFeatureClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\NewFieldForm.resx">
+      <DependentUpon>NewFieldForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\NewTopForm.resx">
+      <DependentUpon>NewTopForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\OtherSetupForm.resx">
+      <DependentUpon>OtherSetupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\QuickImportForm.resx">
+      <DependentUpon>QuickImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\QuickImportForm2.resx">
+      <DependentUpon>QuickImportForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\QuickImportForm3.resx">
+      <DependentUpon>QuickImportForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\RegSoftForm.resx">
+      <DependentUpon>RegSoftForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\RenameFeatureclassFrm.resx">
+      <DependentUpon>RenameFeatureclassFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\TableStructForm.resx">
+      <DependentUpon>TableStructForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\WorkspaceSelectForm.resx">
+      <DependentUpon>WorkspaceSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sys\YsdmSetValueForm.resx">
+      <DependentUpon>YsdmSetValueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zrzy\CzcdydTqForm.resx">
+      <DependentUpon>CzcdydTqForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zrzy\JBNTTBBHSetValForm.resx">
+      <DependentUpon>JBNTTBBHSetValForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zrzy\JBNTTBTqOptForm.resx">
+      <DependentUpon>JBNTTBTqOptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zrzy\zrzyTbTqFrm.resx">
+      <DependentUpon>zrzyTbTqFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LSPageLayerout\LSPageLayerout.csproj">
+      <Project>{1E33C9E0-146A-40A1-8583-1D68F3F57905}</Project>
+      <Name>LSPageLayerout</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LSUtility\LSUtility.csproj">
+      <Project>{5F299BDF-5616-4991-84B7-AC5569C4F15B}</Project>
+      <Name>LSUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RCIS\RCIS.csproj">
+      <Project>{0EA8174C-4E4F-44FC-8687-B32C6A69F455}</Project>
+      <Name>RCIS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SphereArea\SphereArea.csproj">
+      <Project>{F6DEC84C-1F64-44B9-AC30-D3033E77F10D}</Project>
+      <Name>SphereArea</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\sycCommonLib\sycCommonLib.csproj">
+      <Project>{20CF5B33-9F1F-4ACD-8409-D131189FB5F7}</Project>
+      <Name>sycCommonLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_rename_16px_513166_easyicon.net.png" />
+    <None Include="Resources\delete_16px_1179224_easyicon.net.png" />
+    <None Include="Resources\add_16px_1115807_easyicon.net.png" />
+    <EmbeddedResource Include="output\LSOutTool2.cur" />
+    <EmbeddedResource Include="output\LSOutTool2.bmp" />
+    <EmbeddedResource Include="edit\XzdwmsCommand.bmp" />
+    <EmbeddedResource Include="edit\Xzdw2DltbCommand.bmp" />
+    <EmbeddedResource Include="edit\Polygon2LineFeatureCommand.bmp" />
+    <EmbeddedResource Include="edit\LxdwMsCommand.bmp" />
+    <EmbeddedResource Include="edit\InsertVertexTool.cur" />
+    <EmbeddedResource Include="edit\InsertVertexTool.bmp" />
+    <EmbeddedResource Include="edit\GetJZDCommand.bmp" />
+    <EmbeddedResource Include="edit\DLTBUnionCommand.bmp" />
+    <EmbeddedResource Include="edit\DelVertexTool.cur" />
+    <EmbeddedResource Include="edit\DelVertexTool.bmp" />
+    <EmbeddedResource Include="datado\MakeTFCommand.bmp" />
+    <EmbeddedResource Include="edit\ZdszWhCommand.bmp" />
+    <Content Include="if_globe-01_374631.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

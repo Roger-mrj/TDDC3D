@@ -1,0 +1,808 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0EA8174C-4E4F-44FC-8687-B32C6A69F455}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RCIS</RootNamespace>
+    <AssemblyName>RCIS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\release\bg\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\release\bg\RCIS.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\release2\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\RCIS.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.3DAnalyst, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Connection.Local, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AnalysisTools, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ConversionTools, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.DataManagementTools, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRaster, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessing, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessor, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GISClient, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Output, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86" />
+    <Reference Include="gdalconst_csharp, Version=1.0.6440.2162, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\release\gdalconst_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="gdal_csharp, Version=1.0.6440.2161, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\release\gdal_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ogr_csharp, Version=1.0.6551.19024, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\release\ogr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="osr_csharp, Version=1.0.6551.19024, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\release\osr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\AddBookmarkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\AddBookmarkForm.Designer.cs">
+      <DependentUpon>AddBookmarkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AnnotateClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\AnnotateExpressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\AnnotatePlacementFill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\AnnotatePlacementLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\AnnotatePlacementPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\AnnotateScaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\BookMarkManageFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\BookMarkManageFrm.Designer.cs">
+      <DependentUpon>BookMarkManageFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CalSelFeatureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\CalSelFeatureForm.Designer.cs">
+      <DependentUpon>CalSelFeatureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CorTranslateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\CorTranslateForm.Designer.cs">
+      <DependentUpon>CorTranslateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DataFromAShpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\DataFromAShpForm.Designer.cs">
+      <DependentUpon>DataFromAShpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DeleteIdenticalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\DeleteIdenticalForm.Designer.cs">
+      <DependentUpon>DeleteIdenticalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FeatureLayerAttributeForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FeatureLayerAttributeForm2.Designer.cs">
+      <DependentUpon>FeatureLayerAttributeForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FormDataExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FormDataExport.designer.cs">
+      <DependentUpon>FormDataExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FormExportProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FormExportProgress.designer.cs">
+      <DependentUpon>FormExportProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FrmUniqvalueRender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FrmUniqvalueRender.Designer.cs">
+      <DependentUpon>FrmUniqvalueRender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LayerTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\LayerTableForm.Designer.cs">
+      <DependentUpon>LayerTableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MetaDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MetaDataControl.Designer.cs">
+      <DependentUpon>MetaDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MultiLayerSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\MultiLayerSelectForm.Designer.cs">
+      <DependentUpon>MultiLayerSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Polygon2CentroidForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Polygon2CentroidForm.Designer.cs">
+      <DependentUpon>Polygon2CentroidForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Polygon2PolylineFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Polygon2PolylineFrm.Designer.cs">
+      <DependentUpon>Polygon2PolylineFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SevenParasCorTransForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\SevenParasCorTransForm.Designer.cs">
+      <DependentUpon>SevenParasCorTransForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SimpleStyleFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\SimpleStyleFrm.Designer.cs">
+      <DependentUpon>SimpleStyleFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\sketchPropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\sketchPropertiesForm.Designer.cs">
+      <DependentUpon>sketchPropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SnappingSetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\SnappingSetupForm.Designer.cs">
+      <DependentUpon>SnappingSetupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SnapSetupForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\SnapSetupForm2.Designer.cs">
+      <DependentUpon>SnapSetupForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SwipeLayerOptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\SwipeLayerOptForm.Designer.cs">
+      <DependentUpon>SwipeLayerOptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\VGridPropertiesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\VGridPropertiesControl.Designer.cs">
+      <DependentUpon>VGridPropertiesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataInterface\DWG2SHP\Cad2ShpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataInterface\DWG2SHP\Cad2ShpForm.Designer.cs">
+      <DependentUpon>Cad2ShpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataInterface\E00\ArcObject.cs" />
+    <Compile Include="DataInterface\E00\AttributeTable.cs" />
+    <Compile Include="DataInterface\E00\DataExchangeFormE002Shape.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataInterface\E00\E00Exporter.cs" />
+    <Compile Include="DataInterface\E00\E00Importer.cs" />
+    <Compile Include="DataInterface\E00\LabObject.cs" />
+    <Compile Include="DataInterface\E00\PolyObject.cs" />
+    <Compile Include="DataInterface\E00\TableField.cs" />
+    <Compile Include="DataInterface\Exporter.cs" />
+    <Compile Include="DataInterface\GPS\GPSExporter.cs" />
+    <Compile Include="DataInterface\GPS\GPSExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataInterface\GPS\GPSExportForm.Designer.cs">
+      <DependentUpon>GPSExportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataInterface\Importer.cs" />
+    <Compile Include="DataInterface\Txt2ShpFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataInterface\Txt2ShpFrm.Designer.cs">
+      <DependentUpon>Txt2ShpFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataInterface\VCT2In\AGeoObj.cs" />
+    <Compile Include="DataInterface\VCT2In\FeatureCodeBeginEnd.cs" />
+    <Compile Include="DataInterface\VCT2In\TableStructBeginEnd.cs" />
+    <Compile Include="DataInterface\VCT2In\VCTAPolygon2Shp.cs" />
+    <Compile Include="DataInterface\VCT2In\VCTHelper.cs" />
+    <Compile Include="DataInterface\VCT2In\VCTInAExtAttrClass.cs" />
+    <Compile Include="DataInterface\VCT2In\VCTInALINE2SHP.cs" />
+    <Compile Include="DataInterface\VCT2In\VCTInAPOINT2Shp.cs" />
+    <Compile Include="DataInterface\VCT2In\VCTInAPointClass.cs" />
+    <Compile Include="DataInterface\VCT2In\VCTInAPolygonClass.cs" />
+    <Compile Include="DataInterface\VCT2In\VCTInFilGdb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataInterface\VCT2In\VCTInFilGdb.Designer.cs">
+      <DependentUpon>VCTInFilGdb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataInterface\VCT2In\VCTInALineClass.cs" />
+    <Compile Include="DataInterface\VCT2In\VCTReader.cs" />
+    <Compile Include="DataInterface\VCT3In\FeatureCodeBeginEnd3.cs" />
+    <Compile Include="DataInterface\VCT3In\TableStructBeginEnd3.cs" />
+    <Compile Include="DataInterface\VCT3In\VCT3InAExtTable.cs" />
+    <Compile Include="DataInterface\VCT3In\VCT3InFGDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataInterface\VCT3In\VCT3InFGDB.Designer.cs">
+      <DependentUpon>VCT3InFGDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataInterface\VCT3In\VCT3InAPOINT2Shp.cs" />
+    <Compile Include="DataInterface\VCT3In\VCT3InALINE2SHP.cs" />
+    <Compile Include="DataInterface\VCT3In\VCT3APolygon2Shp.cs" />
+    <Compile Include="DataInterface\VCT3In\VCTReader3.cs" />
+    <Compile Include="DataInterface\VCTOut\AObjIndex.cs" />
+    <Compile Include="DataInterface\VCTOut\VCTIdxCreator.cs" />
+    <Compile Include="DataInterface\VCTOut\VCTOutPublic.cs" />
+    <Compile Include="DataInterface\VCTOut\VCTOutput3Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataInterface\VCTOut\VCTOutput3Frm.Designer.cs">
+      <DependentUpon>VCTOutput3Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataInterface\VCTOut\VCToutTmpLineHelper.cs" />
+    <Compile Include="DataInterface\VCTOut\VCTOut11.cs" />
+    <Compile Include="DataInterface\VCTOut\VCTOut12.cs" />
+    <Compile Include="Global\AppParameters.cs" />
+    <Compile Include="Global\GeoReferenceEvent.cs" />
+    <Compile Include="Global\GlobalEditObject.cs" />
+    <Compile Include="Global\SketchEventListener.cs" />
+    <Compile Include="Global\SketchToolHelper.cs" />
+    <Compile Include="MapCmd\Absolutely2GeomtryFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapCmd\Absolutely2GeomtryFrm.Designer.cs">
+      <DependentUpon>Absolutely2GeomtryFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapCmd\AbsolutelyXY2GeoCommand.cs" />
+    <Compile Include="MapCmd\MapPropertyCmd.cs" />
+    <Compile Include="MapCmd\QueryConditionCmd.cs" />
+    <Compile Include="MapTool\AutoEdgeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapTool\AutoEdgeForm.Designer.cs">
+      <DependentUpon>AutoEdgeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapTool\AutoEdgeTool.cs" />
+    <Compile Include="MapCmd\CutIntersectCommand.cs" />
+    <Compile Include="MapCmd\CutPolygonBySelectLineCommand.cs" />
+    <Compile Include="MapCmd\CutPolygonIntersectOptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapCmd\CutPolygonIntersectOptForm.Designer.cs">
+      <DependentUpon>CutPolygonIntersectOptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapCmd\CutPolygonWithoutSelect.cs" />
+    <Compile Include="MapCmd\DeleteAllFeatureCommand.cs" />
+    <Compile Include="MapTool\DeltaXYForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapTool\DeltaXYForm.Designer.cs">
+      <DependentUpon>DeltaXYForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapCmd\DltbStyleRenderCommand.cs" />
+    <Compile Include="MapTool\EditReshapeTask.cs" />
+    <Compile Include="MapCmd\ExportLayerCommand.cs" />
+    <Compile Include="MapTool\FeatureIdentifyTool.cs" />
+    <Compile Include="MapCmd\FeaturesDeleteCommand.cs" />
+    <Compile Include="MapCmd\FeatureUionOptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapCmd\FeatureUionOptionForm.Designer.cs">
+      <DependentUpon>FeatureUionOptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapCmd\FeatureUnionCommand.cs" />
+    <Compile Include="MapCmd\GeometryExportCommand.cs" />
+    <Compile Include="MapTool\GeometryExtentTool.cs" />
+    <Compile Include="MapTool\GeoReferenceTool.cs" />
+    <Compile Include="MapTool\GeoReferenceToolbarFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapTool\GeoReferenceToolbarFrm.Designer.cs">
+      <DependentUpon>GeoReferenceToolbarFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapCmd\InAShpGeoCommand.cs" />
+    <Compile Include="MapCmd\LayerProperyCmd.cs" />
+    <Compile Include="MapCmd\LayerSimpleRender.cs" />
+    <Compile Include="MapCmd\LayerTableCommand.cs" />
+    <Compile Include="MapCmd\LayerTableCommand2.cs" />
+    <Compile Include="MapCmd\LayerTableForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapCmd\LayerTableForm2.Designer.cs">
+      <DependentUpon>LayerTableForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapTool\LayerTableForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapTool\LayerTableForm3.Designer.cs">
+      <DependentUpon>LayerTableForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapTool\LayerTableCommand3.cs" />
+    <Compile Include="MapTool\lineToPolygonFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapTool\lineToPolygonFrm.Designer.cs">
+      <DependentUpon>lineToPolygonFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapTool\ObjectPropertyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapTool\ObjectPropertyForm.Designer.cs">
+      <DependentUpon>ObjectPropertyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapTool\PanEditPolygonTask.cs" />
+    <Compile Include="MapCmd\PropertyEditor.cs" />
+    <Compile Include="MapCmd\PropertyEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapCmd\PropertyEditorForm.Designer.cs">
+      <DependentUpon>PropertyEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapCmd\RemoveLyrCmd.cs" />
+    <Compile Include="MapTool\QueryConditionFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapTool\QueryConditionFrm.designer.cs">
+      <DependentUpon>QueryConditionFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapTool\RemoveSmallTbTask.cs" />
+    <Compile Include="MapTool\RotateTool.cs" />
+    <Compile Include="MapCmd\SketchDeltaXYCommand.cs" />
+    <Compile Include="MapCmd\SketchDelVertexCommand.cs" />
+    <Compile Include="MapTool\SplitPolygonByBisector.cs" />
+    <Compile Include="MapCmd\StyleRenderCommand.cs" />
+    <Compile Include="MapCmd\UniqValueRenderCmd.cs" />
+    <Compile Include="MapCmd\VertexSparsenessCommand.cs" />
+    <Compile Include="MapCmd\ZoomToLayerCmd.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\ObjectSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Query\SpatialQueryForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Query\SpatialQueryForm2.Designer.cs">
+      <DependentUpon>SpatialQueryForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\sycExcelClass.cs" />
+    <Compile Include="RedLineTool.cs" />
+    <Compile Include="StyleClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\AddBookmarkForm.resx">
+      <DependentUpon>AddBookmarkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AnnotateClassForm.resx">
+      <DependentUpon>AnnotateClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AnnotateExpressForm.resx">
+      <DependentUpon>AnnotateExpressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AnnotatePlacementFill.resx">
+      <DependentUpon>AnnotatePlacementFill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AnnotatePlacementLine.resx">
+      <DependentUpon>AnnotatePlacementLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AnnotatePlacementPoint.resx">
+      <DependentUpon>AnnotatePlacementPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AnnotateScaleForm.resx">
+      <DependentUpon>AnnotateScaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BookMarkManageFrm.resx">
+      <DependentUpon>BookMarkManageFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CalSelFeatureForm.resx">
+      <DependentUpon>CalSelFeatureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CorTranslateForm.resx">
+      <DependentUpon>CorTranslateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DataFromAShpForm.resx">
+      <DependentUpon>DataFromAShpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DeleteIdenticalForm.resx">
+      <DependentUpon>DeleteIdenticalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FeatureLayerAttributeForm2.resx">
+      <DependentUpon>FeatureLayerAttributeForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FormDataExport.resx">
+      <DependentUpon>FormDataExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FormExportProgress.resx">
+      <DependentUpon>FormExportProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FrmUniqvalueRender.resx">
+      <DependentUpon>FrmUniqvalueRender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LayerTableForm.resx">
+      <DependentUpon>LayerTableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MetaDataControl.resx">
+      <DependentUpon>MetaDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MultiLayerSelectForm.resx">
+      <DependentUpon>MultiLayerSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Polygon2CentroidForm.resx">
+      <DependentUpon>Polygon2CentroidForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Polygon2PolylineFrm.resx">
+      <DependentUpon>Polygon2PolylineFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SevenParasCorTransForm.resx">
+      <DependentUpon>SevenParasCorTransForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SimpleStyleFrm.resx">
+      <DependentUpon>SimpleStyleFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\sketchPropertiesForm.resx">
+      <DependentUpon>sketchPropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SnappingSetupForm.resx">
+      <DependentUpon>SnappingSetupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SnapSetupForm2.resx">
+      <DependentUpon>SnapSetupForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SwipeLayerOptForm.resx">
+      <DependentUpon>SwipeLayerOptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\VGridPropertiesControl.resx">
+      <DependentUpon>VGridPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInterface\DWG2SHP\Cad2ShpForm.resx">
+      <DependentUpon>Cad2ShpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInterface\E00\DataExchangeFormE002Shape.resx">
+      <DependentUpon>DataExchangeFormE002Shape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInterface\GPS\GPSExportForm.resx">
+      <DependentUpon>GPSExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInterface\Txt2ShpFrm.resx">
+      <DependentUpon>Txt2ShpFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInterface\VCT2In\VCTInFilGdb.resx">
+      <DependentUpon>VCTInFilGdb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInterface\VCT3In\VCT3InFGDB.resx">
+      <DependentUpon>VCT3InFGDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInterface\VCTOut\VCTOutput3Frm.resx">
+      <DependentUpon>VCTOutput3Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapCmd\Absolutely2GeomtryFrm.resx">
+      <DependentUpon>Absolutely2GeomtryFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapTool\AutoEdgeForm.resx">
+      <DependentUpon>AutoEdgeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapCmd\CutPolygonIntersectOptForm.resx">
+      <DependentUpon>CutPolygonIntersectOptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapTool\DeltaXYForm.resx">
+      <DependentUpon>DeltaXYForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapCmd\FeatureUionOptionForm.resx">
+      <DependentUpon>FeatureUionOptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapTool\GeoReferenceToolbarFrm.resx">
+      <DependentUpon>GeoReferenceToolbarFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapCmd\LayerTableForm2.resx">
+      <DependentUpon>LayerTableForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapTool\LayerTableForm3.resx">
+      <DependentUpon>LayerTableForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapTool\lineToPolygonFrm.resx">
+      <DependentUpon>lineToPolygonFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapTool\ObjectPropertyForm.resx">
+      <DependentUpon>ObjectPropertyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapTool\QueryConditionFrm.resx">
+      <DependentUpon>QueryConditionFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\ObjectSearchForm.resx">
+      <DependentUpon>ObjectSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\SpatialQueryForm2.resx">
+      <DependentUpon>SpatialQueryForm2.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MapTool\LayerTableCommand3.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Resources\启动背景1.bmp" />
+    <None Include="Resources\地星LOGO.jpg" />
+    <None Include="DataInterface\GPS\vssver.scc" />
+    <EmbeddedResource Include="MapTool\FeatureIdentifyTool.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapTool\FeatureIdentifyTool.cur">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapCmd\ExportLayerCommand.bmp" />
+    <EmbeddedResource Include="MapCmd\CutIntersectCommand.bmp" />
+    <EmbeddedResource Include="MapCmd\CutPolygonBySelectLineCommand.bmp" />
+    <EmbeddedResource Include="MapCmd\DeleteAllFeatureCommand.bmp" />
+    <EmbeddedResource Include="MapCmd\DltbStyleRenderCommand.bmp" />
+    <EmbeddedResource Include="MapTool\AutoEdgeTool.bmp" />
+    <EmbeddedResource Include="MapTool\AutoEdgeTool.cur" />
+    <Content Include="MapCmd\FeaturesDeleteCommand.bmp" />
+    <Content Include="MapCmd\FeatureUnionCommand.bmp" />
+    <EmbeddedResource Include="MapCmd\AbsolutelyXY2GeoCommand.bmp" />
+    <EmbeddedResource Include="MapCmd\GeometryExportCommand.bmp" />
+    <EmbeddedResource Include="MapCmd\InAShpGeoCommand.bmp" />
+    <EmbeddedResource Include="MapTool\GeoReferenceTool.bmp" />
+    <EmbeddedResource Include="MapTool\GeoReferenceTool.cur" />
+    <EmbeddedResource Include="MapTool\GeometryExtentTool.bmp" />
+    <EmbeddedResource Include="MapTool\GeometryExtentTool.cur" />
+    <Content Include="MapCmd\LayerProperyCmd.bmp" />
+    <Content Include="MapCmd\LayerSimpleRender.bmp" />
+    <EmbeddedResource Include="MapCmd\LayerTableCommand.bmp" />
+    <EmbeddedResource Include="MapCmd\LayerTableCommand2.bmp" />
+    <EmbeddedResource Include="MapCmd\RemoveLyrCmd.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapCmd\StyleRenderCommand.bmp" />
+    <EmbeddedResource Include="MapCmd\SketchDeltaXYCommand.bmp" />
+    <EmbeddedResource Include="MapCmd\SketchDelVertexCommand.bmp" />
+    <Content Include="MapCmd\UniqValueRenderCmd.bmp" />
+    <EmbeddedResource Include="MapCmd\VertexSparsenessCommand.bmp" />
+    <EmbeddedResource Include="MapCmd\ZoomToLayerCmd.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RedLineTool.cur" />
+    <EmbeddedResource Include="RedLineTool.bmp" />
+    <EmbeddedResource Include="MapTool\RotateTool.cur" />
+    <EmbeddedResource Include="MapTool\RotateTool.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ArcDataBinding\ArcDataBinding.csproj">
+      <Project>{9EE68BB1-C309-4B24-9655-D2CC5AE42E0C}</Project>
+      <Name>ArcDataBinding</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LSUtility\LSUtility.csproj">
+      <Project>{5f299bdf-5616-4991-84b7-ac5569c4f15b}</Project>
+      <Name>LSUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\sycCommonLib\sycCommonLib.csproj">
+      <Project>{20CF5B33-9F1F-4ACD-8409-D131189FB5F7}</Project>
+      <Name>sycCommonLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

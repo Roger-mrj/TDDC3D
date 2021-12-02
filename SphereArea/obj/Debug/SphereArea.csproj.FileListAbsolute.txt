@@ -1,0 +1,16 @@
+D:\00Program\TDDC3D\TDDC3D\SphereArea\bin\Debug\SphereArea.dll
+D:\00Program\TDDC3D\TDDC3D\SphereArea\bin\Debug\SphereArea.pdb
+D:\00Program\TDDC3D\TDDC3D\SphereArea\obj\Debug\SphereArea.dll
+D:\00Program\TDDC3D\TDDC3D\SphereArea\obj\Debug\SphereArea.pdb
+D:\Program\TDDC3D\TDDC3D\SphereArea\bin\Debug\SphereArea.dll
+D:\Program\TDDC3D\TDDC3D\SphereArea\bin\Debug\SphereArea.pdb
+D:\Program\TDDC3D\TDDC3D\SphereArea\obj\Debug\SphereArea.dll
+D:\Program\TDDC3D\TDDC3D\SphereArea\obj\Debug\SphereArea.pdb
+C:\ALandStar\Program\TDDC3D\TDDC3D\SphereArea\bin\Debug\SphereArea.dll
+C:\ALandStar\Program\TDDC3D\TDDC3D\SphereArea\bin\Debug\SphereArea.pdb
+C:\ALandStar\Program\TDDC3D\TDDC3D\SphereArea\obj\Debug\SphereArea.dll
+C:\ALandStar\Program\TDDC3D\TDDC3D\SphereArea\obj\Debug\SphereArea.pdb
+D:\27000审核2021\已完成\TDDC3D源码20211105\TDDC3D\SphereArea\bin\Debug\SphereArea.dll
+D:\27000审核2021\已完成\TDDC3D源码20211105\TDDC3D\SphereArea\bin\Debug\SphereArea.pdb
+D:\27000审核2021\已完成\TDDC3D源码20211105\TDDC3D\SphereArea\obj\Debug\SphereArea.dll
+D:\27000审核2021\已完成\TDDC3D源码20211105\TDDC3D\SphereArea\obj\Debug\SphereArea.pdb
